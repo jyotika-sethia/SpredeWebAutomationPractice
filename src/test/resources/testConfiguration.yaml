@@ -1,0 +1,6 @@
+# test browsers {chrome,firefox,edge,safari}
+testBrowser: chrome
+
+# environment and specs
+page_spec_file_root: dataFile
+
