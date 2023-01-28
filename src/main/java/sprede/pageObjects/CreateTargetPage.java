@@ -16,7 +16,7 @@ import sprede.pageFactory.WebViewPage;
 public class CreateTargetPage extends WebViewPage{
 	
 	public CreateTargetPage(TestSession session)  throws Exception {
-		super(session, "pageElementSpecs/sprede");
+		super(session, "pageElementSpecs/target");
 		
 	}
 	
@@ -108,11 +108,9 @@ public class CreateTargetPage extends WebViewPage{
 		element("createTarget").click();
 	}
 	
-	public boolean targetPage()
+	public String targetPage()
 	{
-		new WebDriverWait(session.driver, 100).until(ExpectedConditions.visibilityOf(element("targetPage")));
-		System.out.println("Target title:"+session.driver.getCurrentUrl()+" "+session.driver.getCurrentUrl().equalsIgnoreCase("https://dev.sprede-x.com/target"));
-		return (session.driver.getCurrentUrl().equalsIgnoreCase("https://dev.sprede-x.com/target"));
+		return element("targetTitle").getText();
 	
 	}
 	

@@ -16,7 +16,7 @@ import io.cucumber.junit.Cucumber;
 
 		glue = { "sprede.stepdefinitions" }
 
-		//, tags = { "@smoke" }
+//		, tags = "@friendRequestRecd"
 		, features = { "." }
 
 )
@@ -24,11 +24,11 @@ import io.cucumber.junit.Cucumber;
 public class CukeRunnerTest {
 	@BeforeClass
 	public static void setup() {
-//		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-//		String timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH.mm.ss").format(new Date());
-//		String userDir = System.getProperty("user.dir");
-//		extentProperties.setReportPath(
-//				userDir + "/target/CucumberReportForEveryTestWithTimeStamp/Report_" + timeStamp + ".html");
+		ExtentProperties extentProperties = ExtentProperties.INSTANCE;
+		String timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH.mm.ss").format(new Date());
+		String userDir = System.getProperty("user.dir");
+		extentProperties.setReportPath(
+				userDir + "/target/CucumberReportForEveryTestWithTimeStamp/Report_" + timeStamp + ".html");
 	}
 
 }

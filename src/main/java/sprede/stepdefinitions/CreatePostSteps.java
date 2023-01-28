@@ -33,26 +33,16 @@ public class CreatePostSteps extends StepDefinitionInit{
 
 	@And("user select Event Linking")
 	public void user_select_event_linking() throws Throwable {
-//	   post.EventLinking();
+	   post.EventLinking();
 	   
 	}
 
-//	@And("user upload photo")
-//	public void user_upload_photo() throws Throwable {
-//	   post.photoUpload();
-//	   
-//	}
 
 	@Then("click on Post button")
 	public void click_on_post_button() throws Throwable {
-//	   post.CreatePost();
+	   post.CreatePost();
 	   
 	}
 
-	@Then("user verifies post on the VoxBox")
-	public void user_verifies_post_on_the_vox_box() throws Throwable {
-	   
-	   
-	}
 
 }

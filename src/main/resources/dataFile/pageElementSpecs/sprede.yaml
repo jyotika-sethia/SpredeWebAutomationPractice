@@ -1,4 +1,4 @@
-timeout: 20
+timeout: 30
 elements:
    homePageHeaderImg:
       findBy: xpath
@@ -18,78 +18,3 @@ elements:
    spredeHeaderLogo:
       findBy: xpath
       locator: //div[@class='header-brand']
-   targetTab:
-      findBy: xpath
-      locator: //ul[@class='menu small']/li[2]
-   addNew:
-      findBy: xpath
-      locator: //div[@class='target_add_new_btn']/a
-   title:
-      findBy: xpath
-      locator: //input[@id=':r6:']
-   type:
-      findBy: xpath
-      locator: //label[@id='target-type'][1]/following::div[1]/div[1]
-   type-select:
-      findBy: xpath
-      locator: //li[@data-value='public']   
-   category:
-      findBy: xpath
-      locator: //label[text()='Category']/following::div/div
-   category-type:
-      findBy: xpath
-      locator: //li[text()='Soul']
-   subcategory:
-      findBy: xpath
-      locator: //label[text()='Sub-Category']/following::div[1]/div
-   subcategory-type:
-      findBy: xpath
-      locator: //li[@data-value='6361606e3f897e838b513659']
-   target-units:
-      findBy: xpath
-      locator: //input[@id=':r7:']
-   from-date:
-      findBy: xpath
-      locator: //input[@id=':r8:']
-   selectfrom-date:
-      findBy: xpath
-      locator: //button[text()='26']
-   to-date:
-      findBy: xpath
-      locator: //input[@id=':ra:']
-   selectto-date:
-      findBy: xpath
-      locator: //button[text()='28']
-   description:
-      findBy: xpath
-      locator: //label[text()='Target Description']/following::textarea
-   upload-photo:
-      findBy: xpath
-      locator: //input[@id='upload-photo']/following::div[1]
-   incentive:   
-      findBy: xpath
-      locator: //input[@value='unincentivized']/following::span
-   createTarget:
-      findBy: xpath
-      locator: //button[text()='Create Target']
-   targetPage:
-      findBy: xpath
-      locator: //h2[@class='section-title']
-   enterText:
-      findBy: xpath
-      locator: //div[@data-contents='true']/div/div
-   targetLink:
-      findBy: xpath
-      locator: //input[@id=':r2:']
-   eventLink:
-      findBy: xpath
-      locator: //input[@id=':r4:']
-   post-upload:
-      findBy: xpath
-      locator: //div[text()='Photo/Video']
-   photo-select:
-      findBy: xpath
-      locator: //p[text()='Upload Images and Videos']
-   createPost:
-      findBy: xpath
-      locator: //button[text()='Post']

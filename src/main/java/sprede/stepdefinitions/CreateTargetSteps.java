@@ -50,7 +50,9 @@ public class CreateTargetSteps extends StepDefinitionInit
 
 	@Then("user verifies target is created")
 	public void user_verifies_target_is_created() throws Throwable{
-		Assert.assertTrue(target.targetPage());
+		String expected="Test12";
+		String actual=target.targetPage();
+		Assert.assertEquals("Target is created",expected, actual);
 	    
 	}
 	

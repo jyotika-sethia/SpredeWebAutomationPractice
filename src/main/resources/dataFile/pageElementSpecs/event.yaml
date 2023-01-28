@@ -1,0 +1,38 @@
+timeout: 30
+elements:
+   homePageHeaderImg:
+      findBy: xpath
+      locator: //img[@class='headerImg']
+   loginButton:
+      findBy: xpath
+      locator: //a[text()='Log in']
+   userNameLogin:
+      findBy: xpath
+      locator: //input[@id=':r0:']
+   passwordLogin:
+      findBy: xpath
+      locator: //input[@id=':r1:']
+   loginToYourAccountButton:
+      findBy: xpath
+      locator: //button[text()='Login to your Account!']
+   spredeHeaderLogo:
+      findBy: xpath
+      locator: //div[@class='header-brand']
+   eventTab:
+      findBy: xpath
+      locator: //ul[@class='menu small']/li[3]
+   viewEvent:
+      findBy: xpath
+      locator: (//button[text()='View Event'])[6]
+   manageParticipantbutton:
+      findBy: xpath
+      locator: //button[text()='Manage Participants']
+   blockButton:
+      findBy: xpath
+      locator: (//button[text()='Block'])[3]
+   blockParticipantTab:
+      findBy: xpath
+      locator: //p[text()='Blocked Participants']
+   name:
+      findBy: xpath
+      locator: //div[text()='Tapu T']

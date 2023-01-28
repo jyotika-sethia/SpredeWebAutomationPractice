@@ -1,0 +1,38 @@
+timeout: 30
+elements:
+   homePageHeaderImg:
+      findBy: xpath
+      locator: //img[@class='headerImg']
+   loginButton:
+      findBy: xpath
+      locator: //a[text()='Log in']
+   userNameLogin:
+      findBy: xpath
+      locator: //input[@id=':r0:']
+   passwordLogin:
+      findBy: xpath
+      locator: //input[@id=':r1:']
+   loginToYourAccountButton:
+      findBy: xpath
+      locator: //button[text()='Login to your Account!']
+   spredeHeaderLogo:
+      findBy: xpath
+      locator: //div[@class='header-brand']
+   enterText:
+      findBy: xpath
+      locator: //div[@data-contents='true']/div/div
+   targetLink:
+      findBy: xpath
+      locator: //input[@id=':r2:']/following::div[1]
+   eventLink:
+      findBy: xpath
+      locator: //input[@id=':r4:']/following::div[1]
+   post-upload:
+      findBy: xpath
+      locator: //div[text()='Photo/Video']
+   photo-select:
+      findBy: xpath
+      locator: //p[text()='Upload Images and Videos']
+   createPost:
+      findBy: xpath
+      locator: //button[text()='Post']

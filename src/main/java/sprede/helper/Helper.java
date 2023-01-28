@@ -34,7 +34,7 @@ public class Helper extends StepDefinitionInit{
 	
 	public static void scrollDown()
 	{
-		((JavascriptExecutor) session.driver).executeScript("window.scroll(0,500)","");				
+		((JavascriptExecutor) session.driver).executeScript("window.scroll(0,800)","");				
 	}
 	
 	public static void scrollUp()

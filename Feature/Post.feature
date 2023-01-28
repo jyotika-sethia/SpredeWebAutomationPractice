@@ -7,6 +7,4 @@ Feature: User is able to create post
     Then user enter text
     Then user select Target Linking
     And user select Event Linking
-    #And user upload photo
     And click on Post button
-    Then user verifies post on the VoxBox 

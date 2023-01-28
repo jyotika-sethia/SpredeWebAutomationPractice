@@ -1,5 +1,11 @@
 package sprede.pageObjects;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -9,7 +15,7 @@ import sprede.pageFactory.WebViewPage;
 public class CreatePostPage extends WebViewPage {
 
 	public CreatePostPage(TestSession session) throws Exception {
-		super(session, "pageElementSpecs/sprede");
+		super(session, "pageElementSpecs/post");
 	}
 	
 	public boolean website()
@@ -33,30 +39,37 @@ public class CreatePostPage extends WebViewPage {
 	public void enterText()
 	{
 		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("enterText")));
-		element("enterText").sendKeys("Testing 123");
+		element("enterText").sendKeys("Trial 1");
 
 	}
 	
-	public void TargetLinking()
+	public void TargetLinking() throws InterruptedException, AWTException
 	{
-		element("targetLink").sendKeys("Test123");
+		element("targetLink").click();
+		Thread.sleep(2000);
+		Robot robot = new Robot();
+		robot.mouseMove(550,600);
+		robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(2000);
+		robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(5000);
 		
 		
 	}
 	
-	public void EventLinking()
+	public void EventLinking() throws InterruptedException, AWTException
 	{
-		
-	element("eventLink").sendKeys("Test456");
+		element("eventLink").click();
+		Thread.sleep(2000);
+		Robot robot = new Robot();
+		robot.mouseMove(700,580);
+		robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(2000);
+		robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(5000);
 		
 	}
 	
-//	public void photoUpload()
-//	{
-//	
-//		element("post-upload").click();
-//		element("photo.select").click();
-//	}
 	
 	public void CreatePost()
 	{

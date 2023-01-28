@@ -1,0 +1,50 @@
+timeout: 30
+elements:
+   homePageHeaderImg:
+      findBy: xpath
+      locator: //img[@class='headerImg']
+   loginButton:
+      findBy: xpath
+      locator: //a[text()='Log in']
+   userNameLogin:
+      findBy: xpath
+      locator: //input[@id=':r0:']
+   passwordLogin:
+      findBy: xpath
+      locator: //input[@id=':r1:']
+   loginToYourAccountButton:
+      findBy: xpath
+      locator: //button[text()='Login to your Account!']
+   spredeHeaderLogo:
+      findBy: xpath
+      locator: //div[@class='header-brand']
+   friendsTab:
+      findBy: xpath
+      locator: //ul[@class='menu small']/li[4]
+   findFriends:
+      findBy: xpath
+      locator: //p[text()='Find Friends']
+   search:
+      findBy: xpath
+      locator: //input[@id=':r6:']
+   addFriend:
+      findBy: xpath
+      locator: //button[text()='Add Friend']
+   name:
+      findBy: xpath
+      locator: //p[text()='Tapu Mehta']
+   friendsReqSent:
+      findBy: xpath
+      locator: //p[text()='Friends Request Sent']
+   friendReqRecieved:
+      findBy: xpath
+      locator: //p[text()='Friend Requests Received']
+   acceptReq:
+      findBy: xpath
+      locator: //button[@title='Accept Request']
+   friendList:
+      findBy: xpath
+      locator: //p[text()='Friends List']
+   friendDisplayed:
+      findBy: xpath
+      locator: //p[text()='Neelam Jain']

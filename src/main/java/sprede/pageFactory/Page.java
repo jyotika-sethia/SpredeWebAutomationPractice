@@ -25,8 +25,7 @@ public class Page {
         this.session = session;
         this.pageYamlFile = pageYamlFile;
         this.pageUI = new YamlPage(
-                session.config.get("page_spec_file_root").toString()
-                , pageYamlFile);
+                session.config.get("page_spec_file_root").toString(),pageYamlFile);
         this.hasContext = false;
         if(pageUI.context!=null){
             this.hasContext = true;
