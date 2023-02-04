@@ -22,33 +22,34 @@ public class SendFriendReqSteps extends StepDefinitionInit{
 	}
 
 	@Then("user click on Friends Tab")
-	public void user_click_on_friends_tab() {
+	public void user_click_on_friends_tab() throws InterruptedException {
 	   sendrequest.FriendsTab();
 	  
 	}
 
 	@Then("user click on find friends")
-	public void user_click_on_find_friends() {
+	public void user_click_on_find_friends() throws InterruptedException {
 	   sendrequest.FindFriends();
 	  
 	}
 
 	@And("user enter friend name in search bar")
-	public void user_enter_friend_name_in_search_bar() {
+	public void user_enter_friend_name_in_search_bar() throws InterruptedException {
 	   sendrequest.Search();
 	  
 	}
 
 	@And("user click on Add Friends")
-	public void user_click_on_add_friends() {
+	public void user_click_on_add_friends() throws InterruptedException {
 	   sendrequest.AddFriend();
 	  
 	}
 
 	@Then("user verifies the friend request sent")
-	public void user_verifies_the_friend_request_sent() {
+	public void user_verifies_the_friend_request_sent() throws InterruptedException {
 		 sendrequest.FriendRequestTab();
-		 Assert.assertEquals("Tapu Mehta",sendrequest.VerifyRequest());
+		 Thread.sleep(3000);
+		 Assert.assertEquals("Tapu T",sendrequest.VerifyRequest());
 	}
 
 }

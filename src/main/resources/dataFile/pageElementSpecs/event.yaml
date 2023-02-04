@@ -18,9 +18,84 @@ elements:
    spredeHeaderLogo:
       findBy: xpath
       locator: //div[@class='header-brand']
+   viewMore:
+      findBy: id
+      locator: toggleBtn
    eventTab:
       findBy: xpath
-      locator: //ul[@class='menu small']/li[3]
+      locator: //a[text()='Events']
+   addEvent:
+      findBy: xpath
+      locator: //a[text()='Add New Event']
+   eventName:
+      findBy: xpath
+      locator: (//label[text()='Event Name']/following::div/input)[1]
+   eventCategory:
+      findBy: xpath
+      locator: (//label[text()='Event Category']/following::div/input)[1]
+   targetLinking:
+      findBy: xpath
+      locator: (//label[text()='Target Linking']/following::div/input)[1]
+   eventType:
+      findBy: xpath
+      locator: (//label[@id='target-type']/following::div)[1] 
+   eType:
+      findBy: xpath
+      locator: //li[text()='Public']
+   startTime:
+      findBy: xpath
+      locator: (//label[text()='Start Time']/following::div/input)[1]
+   startDate:
+      findBy: xpath
+      locator: (//label[text()='Event Start Date']/following::div/input)[1]
+   selectfrom:
+      findBy: xpath
+      locator: //button[text()='10']
+   endDate:
+      findBy: xpath
+      locator: (//label[text()='Event End Date']/following::div/input)[1]
+   next:
+      findBy: xpath
+      locator: //button[@title='Next month']
+   selectto:
+      findBy: xpath
+      locator: //button[text()='14']
+   eventDescription:
+      findBy: xpath
+      locator: //label[text()='Event Description']/following::textarea
+   coverPhoto:
+      findBy: xpath
+      locator: (//input[@id='upload-photo']/following::div)[1]
+   location:
+      findBy: xpath
+      locator: (//label[text()='Event Location']/following::div/input)[1]
+   preferredMode:
+      findBy: xpath
+      locator: //input[@id='rate_per_participant']/parent::li
+   frequency:
+      findBy: xpath
+      locator: //input[@value='one_time']/parent::label
+   modeParticipate:
+      findBy: xpath
+      locator: //input[@value='corporate']/parent::label 
+   payment:
+      findBy: xpath
+      locator: //input[@value='free']/parent::label
+   incentive:
+      findBy: xpath
+      locator: //input[@value='unincentivized']/parent::label
+   title:
+      findBy: xpath
+      locator: (//label[text()='Title']/following::div/input)[1]        
+   task:
+      findBy: xpath
+      locator: (//label[text()='Task']/following::div/input)[1]   
+   step:
+      findBy: xpath
+      locator: (//label[text()='Step']/following::div/input)[1]
+   submit:
+      findBy: xpath
+      locator: //button[text()='Finish']  
    viewEvent:
       findBy: xpath
       locator: (//button[text()='View Event'])[6]
@@ -29,10 +104,10 @@ elements:
       locator: //button[text()='Manage Participants']
    blockButton:
       findBy: xpath
-      locator: (//button[text()='Block'])[3]
+      locator: (//button[text()='Block'])[1]
    blockParticipantTab:
       findBy: xpath
       locator: //p[text()='Blocked Participants']
    name:
       findBy: xpath
-      locator: //div[text()='Tapu T']
+      locator: //div[text()='jyotika sethia']

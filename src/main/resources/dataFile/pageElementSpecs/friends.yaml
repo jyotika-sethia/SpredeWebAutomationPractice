@@ -18,9 +18,12 @@ elements:
    spredeHeaderLogo:
       findBy: xpath
       locator: //div[@class='header-brand']
+   viewMore:
+      findBy: id
+      locator: toggleBtn
    friendsTab:
       findBy: xpath
-      locator: //ul[@class='menu small']/li[4]
+      locator: //a[text()='Friends']
    findFriends:
       findBy: xpath
       locator: //p[text()='Find Friends']
@@ -32,7 +35,7 @@ elements:
       locator: //button[text()='Add Friend']
    name:
       findBy: xpath
-      locator: //p[text()='Tapu Mehta']
+      locator: //p[text()='Tapu T']
    friendsReqSent:
       findBy: xpath
       locator: //p[text()='Friends Request Sent']
@@ -47,4 +50,4 @@ elements:
       locator: //p[text()='Friends List']
    friendDisplayed:
       findBy: xpath
-      locator: //p[text()='Neelam Jain']
+      locator: //p[text()='auto testing']

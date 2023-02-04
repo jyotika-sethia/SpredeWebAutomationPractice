@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,7 +49,7 @@ public class CreatePostPage extends WebViewPage {
 		element("targetLink").click();
 		Thread.sleep(2000);
 		Robot robot = new Robot();
-		robot.mouseMove(550,600);
+		robot.mouseMove(550,620);
 		robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 		Thread.sleep(2000);
 		robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
@@ -71,8 +72,11 @@ public class CreatePostPage extends WebViewPage {
 	}
 	
 	
-	public void CreatePost()
+	public void CreatePost() throws InterruptedException
 	{
+		JavascriptExecutor executor = (JavascriptExecutor)session.driver;
+		executor.executeScript("arguments[0].style.border='3px solid red'", element("createPost"));
 		element("createPost").click();
+		Thread.sleep(7000);
 	}
 }

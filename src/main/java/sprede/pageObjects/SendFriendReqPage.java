@@ -1,5 +1,6 @@
 package sprede.pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,34 +29,44 @@ public class SendFriendReqPage extends WebViewPage{
 			element("loginToYourAccountButton").click();
 		}
 		
-		public void FriendsTab()
+		public void FriendsTab() throws InterruptedException
 		{
-			new WebDriverWait(session.driver, 120).until(ExpectedConditions.visibilityOf(element("friendsTab")));
-			element("friendsTab").click();
+			element("viewMore").click();
+			Thread.sleep(3000);
+			element("viewMore").click();
 		}
 		
-		public void FindFriends()
+		public void FindFriends() throws InterruptedException
 		{
-			new WebDriverWait(session.driver, 100).until(ExpectedConditions.visibilityOf(element("findFriends")));
+			Thread.sleep(4000);
+			
 			element("findFriends").click();
+			
 		}
 		
-		public void Search()
+		public void Search() throws InterruptedException
 		{
-			new WebDriverWait(session.driver, 100).until(ExpectedConditions.visibilityOf(element("search")));
+			Thread.sleep(4000);
+			
 			element("search").sendKeys("Tapu");
 		}
 		
-		public void AddFriend()
+		public void AddFriend() throws InterruptedException
 		{
+			JavascriptExecutor executor = (JavascriptExecutor)session.driver;
+			executor.executeScript("arguments[0].style.border='3px solid red'", element("addFriend"));
+			Thread.sleep(4000);
 			new WebDriverWait(session.driver, 120).until(ExpectedConditions.visibilityOf(element("addFriend")));
 			element("addFriend").click();
 		}
 
 		
-		public void FriendRequestTab()
+		public void FriendRequestTab() throws InterruptedException
 		{
-			new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("friendsReqSent")));
+			Thread.sleep(3000);
+//			JavascriptExecutor executor = (JavascriptExecutor)session.driver;
+//			executor.executeScript("arguments[0].style.border='3px solid red'", element("friendReqSent"));
+//			new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("friendsReqSent")));
 			element("friendsReqSent").click();
 		
 			

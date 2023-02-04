@@ -45,10 +45,10 @@ public class ManageActiveParticipantSteps extends StepDefinitionInit{
 	public void user_verifies_the_blocked_participant() {
 
 		manageActive.blockedTab();
-		String expected="Tapu T";
+		String expected="jyotika sethia";
 		String actual=manageActive.verify();
-		Assert.assertEquals("Friend addes to Friend List",expected, actual);
-	   Assert.assertEquals("Tapu T",manageActive.verify());   
+		Assert.assertEquals("Friend added to Friend List",expected, actual);
+	   Assert.assertEquals("jyotika sethia",manageActive.verify());   
 	}
 
 }

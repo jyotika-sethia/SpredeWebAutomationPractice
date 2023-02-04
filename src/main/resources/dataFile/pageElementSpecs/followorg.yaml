@@ -1,0 +1,35 @@
+timeout: 30
+elements:
+   homePageHeaderImg:
+      findBy: xpath
+      locator: //img[@class='headerImg']
+   loginButton:
+      findBy: xpath
+      locator: //a[text()='Log in']
+   userNameLogin:
+      findBy: xpath
+      locator: //input[@id=':r0:']
+   passwordLogin:
+      findBy: xpath
+      locator: //input[@id=':r1:']
+   loginToYourAccountButton:
+      findBy: xpath
+      locator: //button[text()='Login to your Account!']
+   voxBox:
+      findBy: xpath
+      locator: //ul[@class='menu small']/li[1]
+   seeAll:
+      findBy: xpath
+      locator: //a[text()='See all Organizations']
+   search:
+      findBy: xpath
+      locator: //input[@id=':r6:']
+   select:
+      findBy: xpath
+      locator: //div[@class='organizationBlock']/*/div/img
+   follow:
+      findBy: xpath
+      locator: //button[text()='Follow']
+   verify:
+      findBy: xpath
+      locator: //button[text()='UnFollow']

@@ -23,14 +23,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ConfigurationRegistory {
 
-	Map<String, Object> registry;
+	Map<String, Object> config;
 	private static String OS = System.getProperty("os.name").toLowerCase();
 	
 	
 	public WebDriver getDriver(Map<String, Object> config) throws MalformedURLException {
-//		String testBrowser = config.get("testBrowser").toString();
-//		System.out.println("Test browser is " +testBrowser);
-		String testBrowser ="edge";
+		String testBrowser = config.get("testBrowser").toString();
+		System.out.println("Test browser is " +testBrowser);
+//		String testBrowser ="edge";
 		WebDriver driver = null;
 
 		ChromeOptions chromeOptions;
@@ -41,7 +41,7 @@ public class ConfigurationRegistory {
 		switch (testBrowser) {
 		case ("chrome"):
 		System.out.println("In Chrome configuration");
-		//System.setProperty("webdriver.chrome.driver", driverPathChrome);
+//		System.setProperty("webdriver.chrome.driver", driverPathChrome);
 		WebDriverManager.chromedriver().setup();
 		chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("test-type");

@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -36,46 +37,75 @@ public class CreateTargetPage extends WebViewPage{
 		element("loginToYourAccountButton").click();
 	}
 	
-	public void TargetTab() 
+	public void TargetTab() throws InterruptedException 
 	{
-		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("targetTab")));
+		element("viewMore").click();
+		Thread.sleep(3000);
+//		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("targetTab")));
 		element("targetTab").click();
+		Thread.sleep(3000);
+		element("viewMore").click();
 	}
 	
-	public void AddNewTarget() 
+	public void AddNewTarget() throws InterruptedException 
 	{
-		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("addNew")));
+		Thread.sleep(3000);
+//		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("addNew")));
 		element("addNew").click();
 	}
 	
-	public void Form() throws AWTException
+	public void title() 
 	{
-		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("title")));
-		element("title").sendKeys("Test12");
+		element("title").sendKeys("TestTrial12");
 		
-		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("type")));
-		
+	}
+	public void targetType() throws InterruptedException
+	{
 		element("type").click();
+		Thread.sleep(3000);
 		element("type-select").click();
 		
+	}	
+	public void category() throws InterruptedException
+	{
 		element("category").click();
+		Thread.sleep(3000);
 		element("category-type").click();
-	
+	}	
+	public void subCategory() throws InterruptedException
+	{
 		element("subcategory").click();
+		Thread.sleep(3000);
 		element("subcategory-type").click();
-		
+	}
+	public void targetUnits() throws InterruptedException
+	{
 		element("target-units").sendKeys("1500");
-		
+	}
+	public void fromDate() throws InterruptedException
+	{
 		element("from-date").click();
+		Thread.sleep(3000);
 		element("selectfrom-date").click();
-		
+	}
+	public void toDate() throws InterruptedException
+	{
 		element("to-date").click();
+		Thread.sleep(3000);
+		element("next").click();
+		Thread.sleep(3000);
 		element("selectto-date").click();
-		
+	}
+	public void description()
+	{
 		element("description").sendKeys("Testing123 Testing456");
-		
+	}
+	public void uploadPhoto() throws InterruptedException, AWTException
+	{
+		JavascriptExecutor execute = (JavascriptExecutor)session.driver;
+		execute.executeScript("arguments[0].style.border='3px solid red'", element("upload-photo"));
 		element("upload-photo").click();
-		
+		Thread.sleep(3000);
 		  String image ="C:\\Users\\sethi\\Downloads\\testing.jfif";
 	      StringSelection s = new StringSelection(image);
 	      
@@ -95,22 +125,26 @@ public class CreateTargetPage extends WebViewPage{
 	      
 	      r.keyRelease(KeyEvent.VK_ENTER);
 	      
-	      		
-		element("incentive").click();
-		
-				
-	
 	}
 	
-	public void Create_Target()
+	public void incentive() throws InterruptedException
 	{
-//		new WebDriverWait(session.driver, 80).until(ExpectedConditions.visibilityOf(element("createTarget")));
+	      element("incentive").click();
+	}	
+
+	
+	public void Create_Target() throws InterruptedException
+	{
+		JavascriptExecutor execute = (JavascriptExecutor)session.driver;
+		execute.executeScript("arguments[0].style.border='3px solid red'", element("createTarget"));
+		Thread.sleep(3000);
+
 		element("createTarget").click();
 	}
 	
-	public String targetPage()
+	public String targetPage() throws InterruptedException
 	{
-		return element("targetTitle").getText();
+		return session.driver.getCurrentUrl();
 	
 	}
 	

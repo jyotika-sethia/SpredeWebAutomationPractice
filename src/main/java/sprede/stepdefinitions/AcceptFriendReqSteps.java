@@ -14,27 +14,27 @@ public class AcceptFriendReqSteps extends StepDefinitionInit {
 	}
 
 	@When("user click on Friend Tab")
-	public void user_click_on_friend_tab() {
+	public void user_click_on_friend_tab() throws InterruptedException {
 		acceptreq.FriendsTab(); 
 	    
 	}
 
 	@Then("user click on Friends Request Recieved")
-	public void user_click_on_friends_request_recieved() {
+	public void user_click_on_friends_request_recieved() throws InterruptedException {
 		acceptreq.FriendReqRecieved();
 	    
 	}
 
 	@And("user click on accept")
-	public void user_click_on_accept() {
+	public void user_click_on_accept() throws InterruptedException {
 		acceptreq.Accept_Req();
 	    
 	}
 
 	@Then("user verifies the friend in Friend List")
-	public void user_verifies_the_friend_in_friend_list() {
+	public void user_verifies_the_friend_in_friend_list() throws InterruptedException {
 		acceptreq.friendList();
-		String expected="Neelam Jain";
+		String expected="auto testing";
 		String actual=acceptreq.VerifyList();
 		Assert.assertEquals("Friend addes to Friend List",expected, actual);
 //		Assert.assertTrue("Friend Request accepted",acceptreq.VerifyList());

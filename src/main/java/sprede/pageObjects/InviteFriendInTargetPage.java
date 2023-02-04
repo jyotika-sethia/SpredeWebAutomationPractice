@@ -26,30 +26,35 @@ public class InviteFriendInTargetPage extends WebViewPage{
 		element("loginToYourAccountButton").click();
 	}
 	
-	public void target_tab()
+	public void target_tab() throws InterruptedException
 	{
+		element("viewMore").click();
+		Thread.sleep(3000);
 		element("targetTab").click();
 	}
 	
-	public void view_more()
+	public void view_more() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		element("viewmore").click();
 	}
 	
-	public void editTarget()
+	public void editTarget() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		element("editTarget").click();
 	}
 	
-	public void plusIcon()
+	public void plusIcon() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		element("plusButton").click();
 	}
 	
 	public void selectFriend() throws AWTException, InterruptedException
 	{
 		Robot robot = new Robot();
-		robot.mouseMove(400,420);
+		robot.mouseMove(400,440);
 		robot.mousePress(0);robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 		Thread.sleep(2000);
 		robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
@@ -61,9 +66,11 @@ public class InviteFriendInTargetPage extends WebViewPage{
 		Thread.sleep(5000);
 	}
 	
-	public void update_Target()
+	public void update_Target() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		element("updateTarget").click();
+		Thread.sleep(5000);
 	}
 
 }

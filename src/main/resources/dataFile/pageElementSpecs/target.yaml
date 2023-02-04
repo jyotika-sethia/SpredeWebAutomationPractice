@@ -18,9 +18,12 @@ elements:
    spredeHeaderLogo:
       findBy: xpath
       locator: //div[@class='header-brand']
+   viewMore:
+      findBy: id
+      locator: toggleBtn
    targetTab:
       findBy: xpath
-      locator: //ul[@class='menu small']/li[2]
+      locator: //a[text()='Target']
    addNew:
       findBy: xpath
       locator: //div[@class='target_add_new_btn']/a
@@ -53,10 +56,13 @@ elements:
       locator: //input[@id=':r8:']
    selectfrom-date:
       findBy: xpath
-      locator: //button[text()='26']
+      locator: //button[text()='5']
    to-date:
       findBy: xpath
       locator: //input[@id=':ra:']
+   next:
+      findBy: xpath
+      locator: //button[@title='Next month']
    selectto-date:
       findBy: xpath
       locator: //button[text()='28']
@@ -74,10 +80,10 @@ elements:
       locator: //button[text()='Create Target']
    targetTtile:
       findBy: xpath
-      locator: //h6[text()='Test12']
+      locator: //h6[text()='TestTrial12']
    viewmore:
       findBy: xpath
-      locator: //a[text()='View More']
+      locator: (//a[text()='View More'])[3]
    editTarget:
       findBy: xpath
       locator: //a[text()='Edit']

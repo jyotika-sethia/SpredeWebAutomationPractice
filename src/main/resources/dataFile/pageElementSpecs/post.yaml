@@ -22,11 +22,11 @@ elements:
       findBy: xpath
       locator: //div[@data-contents='true']/div/div
    targetLink:
-      findBy: xpath
-      locator: //input[@id=':r2:']/following::div[1]
+      findBy: id
+      locator: targetLink
    eventLink:
-      findBy: xpath
-      locator: //input[@id=':r4:']/following::div[1]
+      findBy: id
+      locator: eventLink
    post-upload:
       findBy: xpath
       locator: //div[text()='Photo/Video']

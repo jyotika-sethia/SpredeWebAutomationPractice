@@ -1,0 +1,68 @@
+timeout: 30
+elements:
+   homePageHeaderImg:
+      findBy: xpath
+      locator: //img[@class='headerImg']
+   loginButton:
+      findBy: xpath
+      locator: //a[text()='Log in']
+   userNameLogin:
+      findBy: xpath
+      locator: //input[@id=':r0:']
+   passwordLogin:
+      findBy: xpath
+      locator: //input[@id=':r1:']
+   loginToYourAccountButton:
+      findBy: xpath
+      locator: //button[text()='Login to your Account!']
+   spredeHeaderLogo:
+      findBy: xpath
+      locator: //div[@class='header-brand']
+   viewMore:
+      findBy: id
+      locator: toggleBtn   
+   validatorToggle:
+      findBy: xpath
+      locator: //ul[@class='menu small']/li[7]/*/span
+   region:
+      findBy: id
+      locator: region
+   idType:
+      findBy: xpath
+      locator: //label[text()='ID Type']/following::div[1]
+   option:
+      findBy: xpath
+      locator: //li[text()='Aadhar Card']
+   nationalId:
+      findBy: xapth
+      locator: (//input[@type='file'])[1]
+   currency:
+      findBy: xpath
+      locator: //input[@id=':r7:']
+   ratehr:
+      findBy: id
+      locator: rate_per_hour
+   participant:
+      findBy: id
+      locator: rate_per_participant
+   fixedrate:
+      findBy: id
+      locator: fixed_rate  
+   resume:
+      findBy: xpath
+      locator: //input[@id='outlined-basic1']/parent::div
+   date:
+      findBy: xpath
+      locator: (//button/*[text()='3'])[2]
+   startTime:
+      findBy: xpath
+      locator: //label[text()='Start Time']/following::div[1] 
+   endTime:
+      findBy: xpath
+      locator: //label[text()='End Time']/following::div[1]
+   timeZone:
+      findBy: xpath
+      locator: //label[text()='Time Zone']/following::div[1]
+   submit:
+      findBy: xpath
+      locator: //button[text()='Submit']

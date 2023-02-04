@@ -38,8 +38,26 @@ public class CreateTargetSteps extends StepDefinitionInit
 
 	@Then("user fill the form with required details")
 	public void user_fill_the_form_with_required_details() throws Throwable{
-		target.Form();
-	    
+		target.title();
+		Thread.sleep(2000);
+		target.targetType();
+		Thread.sleep(2000);
+		target.category();
+		Thread.sleep(2000);
+		target.subCategory();
+		Thread.sleep(2000);
+		target.targetUnits();
+		Thread.sleep(2000);
+		target.fromDate();
+		Thread.sleep(2000);
+		target.toDate();
+		Thread.sleep(2000);
+		target.description();
+		Thread.sleep(2000);
+		target.uploadPhoto();
+		Thread.sleep(2000);
+		target.incentive();
+	   
 	}
 
 	@Then("user click on Create Target")
@@ -50,9 +68,12 @@ public class CreateTargetSteps extends StepDefinitionInit
 
 	@Then("user verifies target is created")
 	public void user_verifies_target_is_created() throws Throwable{
-		String expected="Test12";
+		Thread.sleep(6000);
+		String expected="https://dev.sprede-x.com/target";
 		String actual=target.targetPage();
-		Assert.assertEquals("Target is created",expected, actual);
+		System.out.println("Actual title is "+actual);
+		Thread.sleep(3000);
+		Assert.assertEquals("Target is not created",expected, actual);
 	    
 	}
 	

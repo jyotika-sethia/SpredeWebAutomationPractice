@@ -5,12 +5,15 @@ import java.util.Map;
 
 import sprede.automation.framework.TestSession;
 import sprede.pageObjects.AcceptFriendReqPage;
+import sprede.pageObjects.CreateEventPage;
 import sprede.pageObjects.CreatePostPage;
 import sprede.pageObjects.CreateTargetPage;
+import sprede.pageObjects.FollowOrgPage;
 import sprede.pageObjects.HomePage;
 import sprede.pageObjects.InviteFriendInTargetPage;
 import sprede.pageObjects.ManageActiveParticipantPage;
 import sprede.pageObjects.SendFriendReqPage;
+import sprede.pageObjects.ValidatorFormPage;
 
 
 public class StepDefinitionInit {
@@ -24,6 +27,8 @@ public class StepDefinitionInit {
     
     static CreateTargetPage target;
     
+    static CreateEventPage event;
+    
     static CreatePostPage post;
     
     static SendFriendReqPage sendrequest;
@@ -34,7 +39,13 @@ public class StepDefinitionInit {
     
     static ManageActiveParticipantPage manageActive;
     
-	public TestSession getTestSession() throws Exception {
+	static FollowOrgPage followorg;
+	
+	static ValidatorFormPage validatorform ;
+	
+	
+	
+    public TestSession getTestSession() throws Exception {
 
 		if (session == null) {
 			session = new TestSession();
@@ -42,6 +53,8 @@ public class StepDefinitionInit {
 		homepage =new HomePage(session);
 			
 		target = new CreateTargetPage(session);
+		
+		event = new CreateEventPage(session);
 		
 		post = new CreatePostPage(session);
 			
@@ -52,6 +65,10 @@ public class StepDefinitionInit {
 		invite = new InviteFriendInTargetPage(session);
 		
 		manageActive = new ManageActiveParticipantPage(session);
+	
+		followorg = new FollowOrgPage(session);
+		
+		validatorform = new ValidatorFormPage(session);
 		
 		} 
 

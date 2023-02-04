@@ -16,25 +16,25 @@ public class InviteFriendInTargetSteps extends StepDefinitionInit{
 	}
 
 	@When("user click on target")
-	public void user_click_on_target() {
+	public void user_click_on_target() throws InterruptedException {
 	    invite.target_tab();
 	   
 	}
 
 	@Then("user click on view more")
-	public void user_click_on_view_more() {
+	public void user_click_on_view_more() throws InterruptedException{
 	    invite.view_more();
 	   
 	}
 
 	@And("user click on Edit Target")
-	public void user_click_on_edit_target() {
+	public void user_click_on_edit_target() throws InterruptedException{
 	    invite.editTarget();
 	   
 	}
 
 	@And("user click on + icon")
-	public void user_click_on_icon() {
+	public void user_click_on_icon() throws InterruptedException{
 	    invite.plusIcon();
 	   
 	}
@@ -46,7 +46,7 @@ public class InviteFriendInTargetSteps extends StepDefinitionInit{
 	}
 
 	@Then("user click on Update Target")
-	public void user_click_on_update_target() {
+	public void user_click_on_update_target() throws InterruptedException{
 	    invite.update_Target();
 	   
 	}

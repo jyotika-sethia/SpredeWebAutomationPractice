@@ -10,4 +10,4 @@ Feature: User is able to send friend request
     And user enter friend name in search bar
     And user click on Add Friends
     Then user verifies the friend request sent
-
+  

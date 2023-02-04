@@ -16,8 +16,8 @@ import io.cucumber.junit.Cucumber;
 
 		glue = { "sprede.stepdefinitions" }
 
-//		, tags = "@friendRequestRecd"
-		, features = { "." }
+//		, tags =   @followorg
+		, features = { "C:\\Users\\sethi\\eclipse-workspace\\Practice\\SpredeWebAutomationPractice\\Feature\\UserLogin.feature" }
 
 )
 

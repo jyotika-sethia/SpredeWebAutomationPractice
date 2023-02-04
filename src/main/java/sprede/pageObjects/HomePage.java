@@ -31,7 +31,7 @@ public class HomePage extends WebViewPage {
 	}
 
 	public void enterEmail() {
-		element("userNameLogin").sendKeys("automantesting@yopmail.com");
+		element("userNameLogin").sendKeys("automationtesting@yopmail.com");
 		
 	}
 
